@@ -17,7 +17,7 @@ export default class CreateCommentForm extends React.Component {
     document.title = "Edit Comment";
     const id = this.props.match.params.commentId;
     this.setState({ id: id });
-    fetch(`http://localhost:4000/api/comments/${id}`)
+    fetch(`https://back-end-404.herokuapp.com/api/comments/${id}`)
       .then((response) => {
         return response.json();
       })
@@ -42,7 +42,7 @@ export default class CreateCommentForm extends React.Component {
     const time = Date.now();
     const today = new Date(time);
 
-    fetch(`http://localhost:4000/api/comments/${this.state.id}`, {
+    fetch(`https://back-end-404.herokuapp.com/api/comments/${this.state.id}`, {
       method: "PUT",
       body: JSON.stringify({
         name: this.state.name,

@@ -15,7 +15,7 @@ export default class Steps extends React.Component {
     if (!isDeleteConfirmed) {
       return;
     }
-    const url = `http://localhost:4000/api/comments/${kk}`;
+    const url = `https://back-end-404.herokuapp.com/api/comments/${kk}`;
     fetch(url, { method: "DELETE" }).then(() => {
       toast.success(`Comment was deleted`);
     });

@@ -31,7 +31,7 @@ export default class CreateCommentForm extends React.Component {
     const time = Date.now();
     const today = new Date(time);
 
-    fetch("http://localhost:4000/api/comments", {
+    fetch("https://back-end-404.herokuapp.com/api/comments", {
       method: "POST",
       body: JSON.stringify({
         name: this.state.name,

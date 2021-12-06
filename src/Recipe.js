@@ -13,7 +13,9 @@ export default class Recipe extends React.Component {
 
   componentDidMount() {
     const id = this.props.match.params.recipeId;
-    fetch(`http://localhost:4000/api/recipes/${id}?_embed=comments`)
+    fetch(
+      `https://back-end-404.herokuapp.com/api/recipes/${id}?_embed=comments`
+    )
       .then((response) => {
         return response.json();
       })

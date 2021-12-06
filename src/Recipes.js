@@ -11,7 +11,7 @@ export default class Recipes extends React.Component {
 
   componentDidMount() {
     document.title = "Recipes";
-    fetch("http://localhost:4000/api/recipes")
+    fetch("https://back-end-404.herokuapp.com/api/recipes")
       .then((response) => {
         return response.json();
       })
