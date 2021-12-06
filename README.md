@@ -1,3 +1,3 @@
 This is the terminal of the test
 
-![Test!](/test.png "Test")
+![Test!](./test.png "Test")
